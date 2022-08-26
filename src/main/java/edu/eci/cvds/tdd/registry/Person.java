@@ -22,6 +22,7 @@ public class Person {
     /** The class' default constructor*/
     public Person() {
         super();
+        this.age = 0;
     }
 
     /**

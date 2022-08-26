@@ -41,12 +41,5 @@ public class RegistryTest {
         Assert.assertEquals(RegisterResult.INVALID_AGE, result);
     }
 
-    @Test
-    public void validateSupériorLimitName(){
-        Person person = new Person("Danielqqqqqqqqqqqqqqqqqqqqqqqqqq", 123456, 20, Gender.MALE, true);
-        RegisterResult result = registry.registerVoter(person);
-        Assert.assertEquals(RegisterResult.UNDERAGE, result);
-    }
-
     // TODO Complete with more test cases
 }
