@@ -1,19 +1,20 @@
 package edu.eci.cvds.tdd.registry;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Registry {
     public RegisterResult registerVoter(Person p){
-        if (p.getAge() == 0) {
-            return RegisterResult.VALID;
-        } else if(p.getAge() < 1){
-            return RegisterResult.INVALID_AGE;
-        } else if (p.getAge() < 17) {
-            return RegisterResult.UNDERAGE;
-        } else if (p.getAge() < 90){
-            return RegisterResult.VALID;
-        } else {
-            return RegisterResult.DEAD;
+        RegisterResult validAge = p.getAge() == null ? RegisterResult.VALID : p.getAge().getValidAge();
+        RegisterResult validName = p.getName() == null ? RegisterResult.VALID : p.getName().getValidName();
+
+        ArrayList<RegisterResult> validateVariables = new ArrayList<>(Arrays.asList(validAge, validName));
+
+        for(RegisterResult result : validateVariables){
+            if(result != RegisterResult.VALID){
+                return result;
+            }
         }
-        // TODO Validate person and return real result.
-        // return RegisterResult.VALID;
+        return RegisterResult.VALID;
     }
 }

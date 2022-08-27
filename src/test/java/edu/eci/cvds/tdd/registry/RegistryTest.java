@@ -15,31 +15,50 @@ public class RegistryTest {
 
     @Test
     public void validateSuperiorLimitAge(){
-        Person person = new Person("Daniel", 123456, 1001, Gender.MALE, true);
+        Person person = new Person(new Name("Daniel"), 123456, new Age(1001), Gender.MALE, true);
         RegisterResult result = registry.registerVoter(person);
         Assert.assertEquals(RegisterResult.DEAD, result);
     }
 
     @Test
     public void validateValidAge(){
-        Person person = new Person("Daniel", 123456, 20, Gender.MALE, true);
+        Person person = new Person(new Name("Daniel"), 123456, new Age(20), Gender.MALE, true);
         RegisterResult result = registry.registerVoter(person);
         Assert.assertEquals(RegisterResult.VALID, result);
     }
 
     @Test
     public void validateUnderageAge(){
-        Person person = new Person("Daniel", 123456, 5, Gender.MALE, true);
+        Person person = new Person(new Name("Daniel"), 123456, new Age(5), Gender.MALE, true);
         RegisterResult result = registry.registerVoter(person);
         Assert.assertEquals(RegisterResult.UNDERAGE, result);
     }
 
     @Test
     public void validateLowerLimiteAge(){
-        Person person = new Person("Daniel", 123456, -5, Gender.MALE, true);
+        Person person = new Person(new Name("Daniel"), 123456, new Age(-5), Gender.MALE, true);
         RegisterResult result = registry.registerVoter(person);
         Assert.assertEquals(RegisterResult.INVALID_AGE, result);
     }
 
-    // TODO Complete with more test cases
+    @Test
+    public void validateSuperiorLimitName(){
+        Person person = new Person(new Name("Danielqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"), 123456, new Age(20), Gender.MALE, true);
+        RegisterResult result = registry.registerVoter(person);
+        Assert.assertEquals(RegisterResult.NAME_TOO_LONG, result);
+    }
+
+    @Test
+    public void validateValidName(){
+        Person person = new Person(new Name("Daniel"), 123456, new Age(20), Gender.MALE, true);
+        RegisterResult result = registry.registerVoter(person);
+        Assert.assertEquals(RegisterResult.VALID, result);
+    }
+
+    @Test
+    public void validateLowerLimitName(){
+        Person person = new Person(new Name(""), 123456, new Age(20), Gender.MALE, true);
+        RegisterResult result = registry.registerVoter(person);
+        Assert.assertEquals(RegisterResult.NO_NAME, result);
+    }
 }

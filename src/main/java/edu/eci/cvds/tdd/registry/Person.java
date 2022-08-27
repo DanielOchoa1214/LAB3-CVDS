@@ -5,13 +5,13 @@ package edu.eci.cvds.tdd.registry;
  */
 public class Person {
     /** Person's name*/
-    String name;
+    Name name;
 
     /** A person's identification number*/
     int id;
 
     /** Person's age*/
-    int age;
+    Age age;
 
     /** Person's gender*/
     private Gender gender;
@@ -22,7 +22,6 @@ public class Person {
     /** The class' default constructor*/
     public Person() {
         super();
-        this.age = 0;
     }
 
     /**
@@ -33,7 +32,7 @@ public class Person {
      *  @param gender the gender
      *  @param alive if the person is alive
      */
-    public Person(String name, int id, int age, Gender gender, boolean alive) {
+    public Person(Name name, int id, Age age, Gender gender, boolean alive) {
         this.name = name;
         this.id = id;
         this.age = age;
@@ -45,7 +44,7 @@ public class Person {
      * Returns the person name
      * @return the name
      */
-    public String getName() {
+    public Name getName() {
         return name;
     }
 
@@ -61,7 +60,7 @@ public class Person {
      * Returns this person's age
      * @return the age
      */
-    public int getAge() {
+    public Age getAge() {
         return age;
     }
 
@@ -85,7 +84,7 @@ public class Person {
      * Sets the person name
      * @param name the name to set
      */
-    public void setName(String name) {
+    public void setName(Name name) {
         this.name = name;
     }
 
@@ -101,7 +100,7 @@ public class Person {
      * Sets the person age
      * @param age the age to set
      */
-    public void setAge(int age) {
+    public void setAge(Age age) {
         this.age = age;
     }
 
