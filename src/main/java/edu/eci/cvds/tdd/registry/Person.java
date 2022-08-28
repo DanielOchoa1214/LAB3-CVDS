@@ -8,13 +8,13 @@ public class Person {
     Name name;
 
     /** A person's identification number*/
-    int id;
+    Id id;
 
     /** Person's age*/
     Age age;
 
     /** Person's gender*/
-    private Gender gender;
+    private PersonGender gender;
 
     /** Flag to specify if a person is alive*/
     boolean alive;
@@ -32,7 +32,7 @@ public class Person {
      *  @param gender the gender
      *  @param alive if the person is alive
      */
-    public Person(Name name, int id, Age age, Gender gender, boolean alive) {
+    public Person(Name name, Id id, Age age, PersonGender gender, boolean alive) {
         this.name = name;
         this.id = id;
         this.age = age;
@@ -52,7 +52,7 @@ public class Person {
      * Returns the person identification number
      * @return the identification Number
      */
-    public int getId() {
+    public Id getId() {
         return id;
     }
 
@@ -68,7 +68,7 @@ public class Person {
      * Returns the gender
      * @return the gender
      */
-    public Gender getGender() {
+    public PersonGender getGender() {
         return gender;
     }
 
@@ -92,7 +92,7 @@ public class Person {
      * Sets the person identification number
      * @param id the identification Number to set
      */
-    public void setId(int id) {
+    public void setId(Id id) {
         this.id = id;
     }
 
@@ -108,7 +108,7 @@ public class Person {
      * Sets the person gender
      * @param gender the gender to set
      */
-    public void setGender(Gender gender) {
+    public void setGender(PersonGender gender) {
         this.gender = gender;
     }
 

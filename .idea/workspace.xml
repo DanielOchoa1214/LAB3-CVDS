@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec504e86-dd24-4692-b144-d1835be6d70d" name="Changes" comment="Primer Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/registry/Age.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/registry/Name.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/registry/Id.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/registry/PersonGender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/registry/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/registry/Person.java" afterDir="false" />
@@ -48,6 +46,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="edu.eci.cvds.tdd.registry" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.RegistryTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
